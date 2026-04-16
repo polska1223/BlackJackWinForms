@@ -35,8 +35,8 @@
             lstPlayerCards = new ListBox();
             lblPlayerScore = new Label();
             lblDealerScore = new Label();
-            lblStatus = new Label();
             lstDealerCards = new ListBox();
+            lblStatus = new Label();
             SuspendLayout();
             // 
             // btnStartGame
@@ -45,9 +45,9 @@
             btnStartGame.Name = "btnStartGame";
             btnStartGame.Size = new Size(125, 29);
             btnStartGame.TabIndex = 0;
-            btnStartGame.Text = "btnStartGame";
+            btnStartGame.Text = "Start Game";
             btnStartGame.UseVisualStyleBackColor = true;
-            btnStartGame.Click += button1_Click;
+            btnStartGame.Click += btnStartGame_Click;
             // 
             // txtPlayerName
             // 
@@ -55,7 +55,7 @@
             txtPlayerName.Name = "txtPlayerName";
             txtPlayerName.Size = new Size(125, 27);
             txtPlayerName.TabIndex = 1;
-            txtPlayerName.Text = "txtPlayerName";
+            txtPlayerName.Text = "";
             // 
             // btnHit
             // 
@@ -63,8 +63,9 @@
             btnHit.Name = "btnHit";
             btnHit.Size = new Size(94, 29);
             btnHit.TabIndex = 2;
-            btnHit.Text = "btnHit";
+            btnHit.Text = "Hit";
             btnHit.UseVisualStyleBackColor = true;
+            btnHit.Click += btnHit_Click;
             // 
             // btnStand
             // 
@@ -72,56 +73,52 @@
             btnStand.Name = "btnStand";
             btnStand.Size = new Size(94, 29);
             btnStand.TabIndex = 3;
-            btnStand.Text = "btnStand";
+            btnStand.Text = "Stand";
             btnStand.UseVisualStyleBackColor = true;
-            btnStand.Click += button3_Click;
+            btnStand.Click += btnStand_Click;
             // 
             // lstPlayerCards
             // 
             lstPlayerCards.FormattingEnabled = true;
-            lstPlayerCards.Items.AddRange(new object[] { "lstPlayerCards" });
             lstPlayerCards.Location = new Point(59, 284);
             lstPlayerCards.Name = "lstPlayerCards";
             lstPlayerCards.Size = new Size(150, 104);
             lstPlayerCards.TabIndex = 4;
-            lstPlayerCards.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // lblPlayerScore
             // 
             lblPlayerScore.AutoSize = true;
-            lblPlayerScore.Location = new Point(256, 167);
+            lblPlayerScore.Location = new Point(30, 150);
             lblPlayerScore.Name = "lblPlayerScore";
-            lblPlayerScore.Size = new Size(103, 20);
+            lblPlayerScore.Size = new Size(94, 20);
             lblPlayerScore.TabIndex = 5;
-            lblPlayerScore.Text = "lblPlayerScore";
+            lblPlayerScore.Text = "Player Score:";
             // 
             // lblDealerScore
             // 
             lblDealerScore.AutoSize = true;
-            lblDealerScore.Location = new Point(256, 200);
+            lblDealerScore.Location = new Point(30, 180);
             lblDealerScore.Name = "lblDealerScore";
-            lblDealerScore.Size = new Size(107, 20);
+            lblDealerScore.Size = new Size(98, 20);
             lblDealerScore.TabIndex = 6;
-            lblDealerScore.Text = "lblDealerScore";
-            lblDealerScore.Click += label2_Click;
-            // 
-            // lblStatus
-            // 
-            lblStatus.AutoSize = true;
-            lblStatus.Location = new Point(268, 235);
-            lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(66, 20);
-            lblStatus.TabIndex = 7;
-            lblStatus.Text = "lblStatus";
+            lblDealerScore.Text = "Dealer Score:";
             // 
             // lstDealerCards
             // 
             lstDealerCards.FormattingEnabled = true;
-            lstDealerCards.Items.AddRange(new object[] { "lstDealerCards" });
             lstDealerCards.Location = new Point(228, 284);
             lstDealerCards.Name = "lstDealerCards";
             lstDealerCards.Size = new Size(150, 104);
             lstDealerCards.TabIndex = 8;
+            // 
+            // lblStatus
+            // 
+            lblStatus.AutoSize = true;
+            lblStatus.Location = new Point(30, 210);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(49, 20);
+            lblStatus.TabIndex = 7;
+            lblStatus.Text = "Status:";
             // 
             // Form1
             // 
@@ -138,7 +135,7 @@
             Controls.Add(txtPlayerName);
             Controls.Add(btnStartGame);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Blackjack";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -152,7 +149,7 @@
         private ListBox lstPlayerCards;
         private Label lblPlayerScore;
         private Label lblDealerScore;
-        private Label lblStatus;
         private ListBox lstDealerCards;
+        private Label lblStatus;
     }
 }

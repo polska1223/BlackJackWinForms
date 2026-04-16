@@ -1,4 +1,4 @@
-﻿namespace BlackJackWinforms
+﻿namespace BlackJackWInforms
 {
     public class GameManager
     {

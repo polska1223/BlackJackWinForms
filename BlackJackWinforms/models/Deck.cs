@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BlackJackWinforms
+namespace BlackJackWInforms
 {
     public class Deck
     {
